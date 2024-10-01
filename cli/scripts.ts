@@ -71,22 +71,6 @@ const main = async () => {
 
     const stakedInfo = await getStakedNFTsFromWallet(new PublicKey('7eaQfTpHQGD6EnZNgLErkZy12NB7p5z3M8KHg3NyDBC9'));
     console.log(stakedInfo);
-    /*const userPool: UserPool = await getUserPoolState(new PublicKey('9rDdTaSR8F4iDteLsLGmTVuVP3uw1wx5uXRs7LdWCqXQ'));
-    console.log({
-        // ...userPool,
-        owner: userPool.owner.toBase58(),
-        stakedMints: userPool.stakedMints.slice(0, userPool.stakedCount.toNumber()).map((info) => {
-            return {
-                // ...info,
-                mint: info.mint.toBase58(),
-                stakedTime: info.stakedTime.toNumber(),
-                isLegendary: info.isLegendary,
-            }
-        }),
-        stakedCount: userPool.stakedCount.toNumber(),
-        remainingRewards: userPool.remainingRewards.toNumber(),
-        lastRewardTime: (new Date(1000 * userPool.lastRewardTime.toNumber())).toLocaleString(),
-    });*/
 };
 
 export const getStakedNFTsFromWallet = async (address: PublicKey) => {
